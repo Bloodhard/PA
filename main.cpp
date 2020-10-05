@@ -9,14 +9,14 @@ using namespace std;
 
 int main(void) {
   int n1, n2, n3, n4;
-  
-  printf("Digite o nome do aluno: ");
-  string fullName;
-cout << "Type your full name: ";
-getline (cin, fullName);
-cout << "Your name is: " << fullName;
+  char nome[200], sobrenome[200];
  
-
+ printf("Digite o nome do aluno: ");
+ scanf("%s", nome);
+ 
+ printf("Digite o sobrenome do aluno: ");
+ scanf("%s", sobrenome);
+ 
  printf("Digite a primeira nota: ");
  scanf("%d", &n1);
  
@@ -30,13 +30,13 @@ cout << "Your name is: " << fullName;
  scanf("%d", &n4);
 
  int media = (n1 +n2 +n3 +n4) / 4;
-
+ 
+ printf("\na media do aluno %s %s é: %d",nome,sobrenome, media);
  if (media >= 7){
-   printf("O aluno %string foi aprovado", fullName);
+   printf("\nO aluno %s %s ,foi aprovado",nome,sobrenome);
  }
   else{
-    printf("O aluno %c foi reprovado", fullName);
+    printf("\nO aluno %s %s ,foi reprovado",nome,sobrenome);
   }
-  printf("a media do aluno é: %d", media);
   return(0);
 }
